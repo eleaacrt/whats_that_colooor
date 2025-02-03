@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+    color: white;
+    font-family: "Josefin Sans", serif;
+    font-size: 1rem;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    /* padding: 60px 70px; */
+}
+
+div.theme_color {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    font-family: "Climate Crisis", serif;
+    text-transform: uppercase;
+    font-size: 7rem;
+    display: block;
+    mix-blend-mode: exclusion;
+    width: fit-content;
+    margin: auto;
+    padding-top: 20px;
+}
+
+p.rules {
+    font-family: "Josefin Sans", serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    mix-blend-mode: exclusion;
+}
+
+/* pick the color */
+
+section.pick {
+    padding-top: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section.section-circle {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: -1;
+}
+
+div.circle {
+    width: 80vh;
+    height: 80vh;
+    border-radius: 500px;
+    position: relative;
+}
+
+section.sliders {
+    display: flex;
+    padding: 70px;
+    width: 80%;
+    justify-content: space-around;
+    margin: auto;
+}
+
+section.sliders div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+p.r-g-b-title {
+    font-size: 3rem;
+    font-family: "Climate Crisis", serif;
+    text-align: center;
+    mix-blend-mode: exclusion;
+    text-transform: uppercase;
+}
+
+p.color-value {
+    font-size: 6rem;
+    text-align: center;
+    font-family: "Climate Crisis", serif;
+    text-align: center;
+    mix-blend-mode: exclusion;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+section.check_pick {
+    mix-blend-mode: normal;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Climate Crisis", serif;
+    text-transform: uppercase;
+    font-size: 20rem;
+    align-items: center;
+    justify-content: center;
+    background: rgba(1.0, 1.0, 1.0, 0.8);
+    z-index: 1000;
+}
+
+
+/* name the color */
+
+section.name .title {
+    min-height: 100vh;
+    padding-top: 60px;
+    background-color: white;
+    mix-blend-mode: exclusion;
+}
+
+section.name .title {
+    min-height: 50vh;
+}
+
+section.name .guesses {
+    min-height: 50vh;
+}
+
+/* nav-bar */
+
+div.nav-bar {
+    width: 100vw;
+    height: 5vh;
+    background-color: white;
+    mix-blend-mode: exclusion;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a.link-to-pages {
+    font-family: "Climate Crisis", serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    mix-blend-mode: exclusion;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
