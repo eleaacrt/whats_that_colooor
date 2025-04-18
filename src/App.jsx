@@ -30,6 +30,7 @@ export default function App() {
   });
 
   const [isFav, setIsFav] = useState(false);
+  const [name, setName] = useState(false);
 
   async function getColors() {
     const redRandom = Math.floor(Math.random() * 255);
@@ -41,15 +42,19 @@ export default function App() {
       const color = await response.json();
 
       setColors({
-        red: { random: redRandom, api: color.rgb.r },
-        green: { random: greenRandom, api: color.rgb.g },
-        blue: { random: blueRandom, api: color.rgb.b }
+        red: { random: 0, api: color.rgb.r },
+        green: { random: 0, api: color.rgb.g },
+        blue: { random: 0, api: color.rgb.b }
       });
+
+      setName(color.name.value);
 
     } catch (error) {
       console.error("Erreur lors de la récupération des couleurs :", error);
     }
   }
+
+
 
   function addFav(favColors, newColor) {
     favColors.push(newColor);
@@ -127,13 +132,11 @@ export default function App() {
       <main className="scrollify">
         <div className="theme_color" style={{ background: `rgb(${colors.red.api}, ${colors.green.api}, ${colors.blue.api})` }}></div>
 
-        {/* {welcome && <Welcome getColors={getColors} setWelcome={setWelcome} />} */}
-
         <Pick getColors={colors} />
 
-        <Name getColors={colors} />
+        {/* <Name getColors={colors} /> */}
 
-        <Hexacode getColors={colors} label={`${colors.red.api} ${colors.green.api} ${colors.blue.api}`} />
+        <Hexacode getColors={colors} label={name} />
 
         {/* logo add to fav */}
         <button className={!isFav ? "logo_fav" : "logo_fav_filled"} onClick={handleFavClick}>

@@ -345,3 +345,20 @@ section.hexacode div {
     color: white;
     mix-blend-mode: exclusion;
 }
+
+.logo_fav_filled_grid{
+    fill: rgba(255, 255, 255, 1);
+    mix-blend-mode: exclusion;
+    background: none;
+    cursor: pointer;
+    margin: 30px;
+    border: none;
+}
+
+.logo_fav_filled_grid svg{
+    fill: rgba(255, 255, 255, 1);
+}
+
+.logo_fav_filled_grid svg:hover{
+    fill: rgba(255, 255, 255, 0.5);
+}
