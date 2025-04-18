@@ -54,8 +54,6 @@ export default function App() {
     }
   }
 
-
-
   function addFav(favColors, newColor) {
     favColors.push(newColor);
     localStorage.setItem('favColors', JSON.stringify(favColors));
@@ -88,6 +86,9 @@ export default function App() {
           green: { random: parsedSliderColor.green, api: parsedColor.green },
           blue: { random: parsedSliderColor.blue, api: parsedColor.blue }
         });
+        fetch(`https://www.thecolorapi.com/id?rgb=(${parsedColor.red},${parsedColor.green},${parsedColor.blue})`)
+          .then(response => response.json())
+          .then(data => setName(data.name.value))
       } catch (error) {
         console.error("Erreur lors du parsing des couleurs :", error);
         getColors();
@@ -133,8 +134,6 @@ export default function App() {
         <div className="theme_color" style={{ background: `rgb(${colors.red.api}, ${colors.green.api}, ${colors.blue.api})` }}></div>
 
         <Pick getColors={colors} />
-
-        {/* <Name getColors={colors} /> */}
 
         <Hexacode getColors={colors} label={name} />
 
