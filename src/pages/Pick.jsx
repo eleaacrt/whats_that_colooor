@@ -35,6 +35,9 @@ const Pick = ({
     return (
         <>
             <section className="pick scrollify">
+                <h1 className="title_mobile">
+                    What's that color ?
+                </h1>
                 <p className="rules">try to find the rgb code of the background by changing the color of the circle with the sliders</p>
                 {/* <p className="rules">click on {'<'}enter{'>'} to check your guess</p> */}
 
@@ -42,7 +45,7 @@ const Pick = ({
                     colorValues={colorValues}
                 ></Circle>
 
-                <h1>
+                <h1 className="title_desktop">
                     What's that
                     <br /> color ?
                 </h1>

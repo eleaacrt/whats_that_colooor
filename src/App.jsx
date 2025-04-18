@@ -42,9 +42,9 @@ export default function App() {
       const color = await response.json();
 
       setColors({
-        red: { random: 0, api: color.rgb.r },
-        green: { random: 0, api: color.rgb.g },
-        blue: { random: 0, api: color.rgb.b }
+        red: { random: redRandom, api: color.rgb.r },
+        green: { random: greenRandom, api: color.rgb.g },
+        blue: { random: blueRandom, api: color.rgb.b }
       });
 
       setName(color.name.value);
