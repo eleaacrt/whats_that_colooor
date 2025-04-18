@@ -6,7 +6,7 @@ const Circle = ({
 }) => {
     return (
         <>
-            <section className="section-circle" >
+            <section className="section_circle" >
                 <div className="circle" style={{ background: "rgb(" + colorValues.red + ", " + colorValues.green + ", " + colorValues.blue + ")" }}></div >
             </section >
         </>
