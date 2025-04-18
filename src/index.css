@@ -126,7 +126,7 @@ section.pick {
 }
 
 
-section.section-circle {
+section.section_circle {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -163,7 +163,7 @@ section.sliders div {
     padding: 0 40px;
 }
 
-p.r-g-b-title {
+p.r_g_b_title {
     font-size: 3rem;
     font-family: "Climate Crisis", serif;
     text-align: center;
@@ -171,7 +171,7 @@ p.r-g-b-title {
     text-transform: uppercase;
 }
 
-p.color-value {
+p.color_value {
     font-size: 6rem;
     text-align: center;
     font-family: "Climate Crisis", serif;
@@ -349,13 +349,13 @@ section.hexacode h1 {
     h1 {
         font-size: 5rem;
     }
-    p.r-g-b-title {
+    p.r_g_b_title {
         font-size: 2rem;
     }
 }
 
 @media (max-width: 1400px) {
-    p.color-value  {
+    p.color_value  {
         font-size: 3.5rem;
     }
 }
@@ -394,10 +394,10 @@ section.hexacode h1 {
         width: 70vw;
         height: 70vw;
     }
-    p.r-g-b-title {
+    p.r_g_b_title {
         font-size: 3rem;
     }
-    p.color-value  {
+    p.color_value  {
         font-size: 4rem;
     }
     
@@ -421,11 +421,11 @@ section.hexacode h1 {
 }
 
 @media (max-width: 600px) {
-    p.color-value  {
+    p.color_value  {
         font-size: 2em;
     }
 
-    p.r-g-b-title {
+    p.r_g_b_title {
         font-size: 2rem;
     }
 }

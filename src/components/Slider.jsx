@@ -20,7 +20,7 @@ const ColorSlider = ({
 
     return (
         <div>
-            <p className="color-value">{colorValue}</p>
+            <p className="color_value">{colorValue}</p>
             <input
                 type="range"
                 id="slider"
@@ -31,7 +31,7 @@ const ColorSlider = ({
                 onChange={handleSliderChange}
             />
 
-            <p className="r-g-b-title">{RGBname}</p>
+            <p className="r_g_b_title">{RGBname}</p>
         </div>
     );
 };

@@ -1,5 +1,4 @@
 import Pick from "/src/pages/Pick"
-import Name from "/src/pages/Name"
 import Hexacode from "/src/pages/Hexacode"
 import { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
