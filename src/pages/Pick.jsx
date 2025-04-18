@@ -19,11 +19,6 @@ const Pick = ({
 
     const [guess, setGuess] = useState(false);
 
-    document.addEventListener("keydown", (e) => {
-        if (e.key == "Enter") {
-            setGuess(!guess);
-        }
-    })
 
     let backgroundValues = {
         red: getColors.red.api,
@@ -39,15 +34,9 @@ const Pick = ({
 
     return (
         <>
-            {
-                guess ? <CheckPick
-                    colorValues={colorValues}
-                    backgroundValues={backgroundValues}
-                ></CheckPick> : ""
-            }
-            <section className="pick">
+            <section className="pick scrollify">
                 <p className="rules">try to find the rgb code of the background by changing the color of the circle with the sliders</p>
-                <p className="rules">click on {'<'}enter{'>'} to check your guess</p>
+                {/* <p className="rules">click on {'<'}enter{'>'} to check your guess</p> */}
 
                 <Circle
                     colorValues={colorValues}

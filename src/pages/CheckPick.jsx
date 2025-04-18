@@ -35,7 +35,7 @@ const CheckPick = ({
 
     return (
         <>
-            <section className="check_pick" style={{ color: "rgb(" + backgroundValues.red + ", " + backgroundValues.green + ", " + backgroundValues.blue + ")" }}>
+            <section className="check_pick scrollify" style={{ color: "rgb(" + backgroundValues.red + ", " + backgroundValues.green + ", " + backgroundValues.blue + ")" }}>
                 <p>{averagePercent} %</p>
             </section>
         </>

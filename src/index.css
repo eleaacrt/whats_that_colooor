@@ -15,8 +15,73 @@ html {
 main {
     height: 100vh;
     width: 100vw;
-    /* padding: 60px 70px; */
 }
+
+.scrollify {
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.scrollify>section {
+    scroll-snap-align: start;
+}
+
+button.logo_reload {
+    mix-blend-mode: exclusion;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+    cursor: pointer;
+    transition: 0.5 ease;
+    background: none;
+    border: none;
+}
+
+button.logo_fav {
+    top: 0;
+    left: 0;
+    fill: rgba(255, 255, 255, 0);
+    position: fixed;
+    mix-blend-mode: exclusion;
+    background: none;
+    cursor: pointer;
+    margin: 30px;
+    border: none;
+}
+
+.link {
+    position: fixed;
+    color: white;
+    mix-blend-mode: exclusion;
+    bottom: 0;
+    z-index: 3;
+    margin: 30px;
+    text-decoration: none;
+}
+
+button.logo_fav:hover svg {
+    fill: rgba(255, 255, 255, 0.5);
+    transition: 0.5 ease;
+}
+
+button.logo_fav_filled {
+    top: 0;
+    left: 0;
+    position: fixed;
+    mix-blend-mode: exclusion;
+    background: none;
+    cursor: pointer;
+    margin: 30px;
+    border: none;
+}
+
+button.logo_fav_filled svg {
+    transition: 0.5 ease;
+    fill: rgba(255, 255, 255, 1);
+}
+
 
 div.theme_color {
     position: fixed;
@@ -45,6 +110,35 @@ p.rules {
     font-weight: 200;
     text-align: center;
     mix-blend-mode: exclusion;
+}
+
+/* welcome */
+.welcome {
+    background-color: #000000;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.welcome h1 {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.welcome a {
+    font-family: "Josefin Sans", serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    mix-blend-mode: exclusion;
+    text-decoration: none;
+    color: white;
 }
 
 /* pick the color */
@@ -150,30 +244,104 @@ section.name .guesses {
     min-height: 50vh;
 }
 
-/* nav-bar */
-
-div.nav-bar {
-    width: 100vw;
-    height: 5vh;
-    background-color: white;
-    mix-blend-mode: exclusion;
-    position: fixed;
-    top: 0;
+form.all_button_guess {
     display: flex;
-    justify-content: space-around;
+    width: 75%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+form.all_button_guess div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 100%;
+    height: 30%;
+
+}
+
+input[type=button].button_guess {
+    font-family: 'Climate Crisis';
+    text-transform: uppercase;
+    background-color: rgba(1.0, 1.0, 1.0, 0.0);
+    border: none;
+    font-size: 4rem;
+    color: white;
+    mix-blend-mode: exclusion;
+    cursor: pointer;
+}
+
+/* hexacode */
+
+section.hexacode {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-a.link-to-pages {
-    font-family: "Climate Crisis", serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
+section.hexacode div {
+    width: 100vw;
+    height: 100vh;
+    border-top: 20vh solid;
+    border-bottom: 20vh solid;
+    display: flex;
     mix-blend-mode: exclusion;
+}
+
+
+/* my_fav */
+
+.my_fav {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.fav_color_grid {
+    position: fixed;
+    display: grid;
     width: 100%;
     height: 100%;
-    text-align: center;
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0;
+    grid-auto-flow: dense;
+    top: 0;
+}
+.no_fav{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.no_fav p{
+    color: white;
+    mix-blend-mode: exclusion;
+}
+
+.fav_color_box {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fav_color_box p {
+    transition: opacity 0.3s ease;
+    color: white;
+    mix-blend-mode: exclusion;
 }
